@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <span>Chat JB</span>
+    </header>    
+    <div id="container">
+        <form id="formulario" onsubmit="return false">
+            <label>Correo electronico</label>
+            <input id="correo" type="email" required>
+            <label>Nombre de usuario</label>
+            <input id="nombre" type="text" required maxlength="10">
+            <input type="submit" id="submit" value="Registrar">
+        </form>
+
+        <div id="chat">
+            <div id="mensajes">
+                <div id="usuario_R"><p id="identificacion"></p></div>
+                <div id="eventos"><p id="escribiendo" ></p></div>
+                <div id="Chat-mensaje">               
+                    <!-- Div -> mensaje_S & mensajes_R -->
+                </div>
+            </div>
+            <textarea id="text_Area" maxlength="150"></textarea>
+            <div id="cantidadU"></div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

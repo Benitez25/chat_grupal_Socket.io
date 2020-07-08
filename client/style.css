@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    background: #1f4068;
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+}
+
+header span{
+    font-size: 40px;
+    font-family: 'Finger Paint', cursive;
+    color: white;
+}
+
+#container{
+    position: relative;
+    width: 99.9%;
+    height: 90.7vh;
+    top: 88px;
+}
+
+#container form{
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    left:50%;
+    top:35%;
+    transform: translate(-50%,-50%);  
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .7) ;
+    display: '';
+}
+
+form label, input{
+    display: block;  
+    margin-top: 15px;
+}
+form label{
+    font-size: 25px;
+    margin-left: 130px;
+}
+form input[type="text"], input[type="email"]{
+    font-size: 20px;
+    margin-left: 96px;
+    padding: 6px;
+    border-radius: 10px;
+}
+form input[type="submit"]{
+    width: 150px;
+    padding: 10px;
+    margin-left: 140px;
+    margin-top: 30px;
+    font-size: 20px;
+    background: #1f4068;
+    color: white;
+    cursor: pointer;
+}
+
+#container #chat{
+    min-height: 78vh;
+    width: 80%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 40px black;
+    border-left: 1px solid #b7b7b7;
+    border-right: 1px solid #b7b7b7;
+    background: rgba(255, 255, 255, 0.7);
+    display: none;
+}
+
+#chat #mensajes{
+    height: 638px; 
+}
+
+#mensajes #usuario_R p{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+    padding: 15px;
+    background: #cfcfcf;
+}
+
+#mensajes #eventos p{
+    font-size: 20px;
+    background: #cfcfcf;
+}
+#Chat-mensaje{
+    overflow-y: scroll;
+    height: 570px;
+    background: url(pattern.png);
+}
+#Chat-mensaje::-webkit-scrollbar{
+    width: 7px;
+}
+#Chat-mensaje::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+
+/*Mensaje Saliente*/
+#Chat-mensaje .mensajes_S{
+    position: relative;
+    padding: 15px;
+    word-break: break-all;
+    right: 0px;
+    margin-bottom: 30px;
+}
+#Chat-mensaje .mensajes_S h4{
+    padding-bottom: 5px;
+    color:#1f4068;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+#Chat-mensaje .mensajes_S p{
+    text-align: right;
+    padding: 10px;
+    margin-left: 60%;
+    border: 1px solid #b7b7b7;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .5);
+    color:white;
+    font-size: 17px;
+
+    position: absolute;
+    right: 10px;
+}
+
+/*Mensaje entrante*/
+#Chat-mensaje .mensajes_E{
+    position: relative;
+    padding: 15px;
+    word-break: break-all;
+    margin-bottom: 30px;
+}
+#Chat-mensaje .mensajes_E h4{
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+    color:#1f4068;
+    font-size: 20px;
+}
+#Chat-mensaje .mensajes_E p{
+    position: absolute;
+    text-align: left;
+    padding: 10px;
+    margin-right: 60%;
+    border: 1px solid #b7b7b7;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .5);
+    color:white;
+    font-size: 17px;
+}
+
+/*Las personas que ingresen al chat*/
+#Chat-mensaje .ingreso{
+    position: relative;
+    padding: 15px;
+    word-break: break-all;
+}
+
+#Chat-mensaje .ingreso p{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .5);
+    color:white;
+    font-size: 19px;
+}
+
+/*Las personas que salen al chat*/
+#Chat-mensaje .salida{
+    word-break: break-all;
+    position: relative;
+    padding: 15px;
+}
+
+#Chat-mensaje .salida p{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .5);
+    color:white;
+    font-size: 19px;
+}
+
+textarea{
+    width: 96.5%;
+    height: 80px;
+    padding: 15px;
+    font-size: 20px;
+    resize: none;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+
+
+/*******************************************************************************************/
+@media screen and (max-width:528px) {
+    #container form{
+        position: absolute;
+        width: 322px;
+        height: 280px;
+        left:50%;
+        top:35%;
+        transform: translate(-50%,-50%);  
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, .7) ;
+        display: '';
+    }
+        
+    form label, input{
+        margin-top: 15px;
+        display: block;  
+    }
+    form label{
+        font-size: 20px;
+        margin-left: 93px;
+    }
+    form input[type="text"], input[type="email"]{
+        font-size: 15px;
+        margin-left: 60px;
+        padding: 6px;
+        border-radius: 10px;
+    }
+    form input[type="submit"]{
+        font-size: 14px;
+        padding: 10px;
+        width: 150px;
+        cursor: pointer;
+        margin-left: 89px;
+        margin-top: 21px;
+        background: #1f4068;
+        color: white;
+    }
+}
+@media screen and (max-height:500px) {
+    #container form{
+        top: 48%
+    }
+}
